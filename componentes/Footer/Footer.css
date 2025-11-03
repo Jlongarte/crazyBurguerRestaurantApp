@@ -1,0 +1,151 @@
+.footer {
+  background: rgba(0, 0, 0, 0.9);
+  padding-top: 40px;
+  color: #fff;
+  position: relative;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 40px;
+}
+
+.footer-section h3 {
+  color: #e68a00;
+  margin-bottom: 10px;
+  letter-spacing: 1px;
+}
+
+.underline {
+  width: 50px;
+  height: 2px;
+  background-color: #e68a00;
+  margin-bottom: 20px;
+}
+
+.footer-section p {
+  color: #ccc;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* Social icons */
+.social-icons {
+  margin-top: 20px;
+}
+
+.social-icons a {
+  background: #e68a00;
+  color: #fff;
+  margin-right: 10px;
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+  text-align: center;
+  line-height: 35px;
+  border-radius: 4px;
+  transition: background 0.3s, transform 0.3s;
+}
+
+.social-icons a:hover {
+  background: #ff9900;
+  transform: scale(1.1);
+}
+
+/* Recent posts */
+.post {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.post img {
+  width: 60px;
+  height: 60px;
+  margin-right: 10px;
+  border-radius: 4px;
+  object-fit: cover;
+}
+
+.post-title {
+  color: #fff;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.date {
+  font-size: 12px;
+  color: #aaa;
+}
+
+/* Instagram grid with zoom-in */
+.insta-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 5px;
+}
+
+.insta-grid img {
+  width: 100%;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 5px;
+  transition: transform 0.4s ease;
+}
+
+.insta-grid img:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+/* Contact section */
+.contact-item {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 15px;
+}
+
+.icon-box {
+  background: #e68a00;
+  color: #fff;
+  width: 35px;
+  height: 35px;
+  text-align: center;
+  line-height: 35px;
+  border-radius: 6px;
+  margin-right: 10px;
+  flex-shrink: 0;
+  transition: background 0.3s, transform 0.3s;
+}
+
+.icon-box:hover {
+  background: #ff9900;
+  transform: scale(1.1);
+}
+
+.contact-item p {
+  font-size: 14px;
+  color: #ccc;
+  line-height: 1.4;
+}
+
+/* Footer bottom */
+.footer-bottom {
+  text-align: center;
+  border-top: 1px solid #444;
+  margin-top: 30px;
+  padding: 20px 0;
+  font-size: 14px;
+  color: #bbb;
+}
+
+/* Responsive Movil */
+@media (max-width: 767px) {
+  .footer {
+    padding: 20px;
+  }
+}

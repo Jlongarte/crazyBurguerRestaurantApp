@@ -1,0 +1,152 @@
+/* Contenedor principal */
+.banner {
+  display: flex;
+  height: 60vh;
+  overflow: hidden;
+}
+
+/* --- Lado izquierdo --- */
+.banner-left {
+  position: relative;
+
+  background: var(--main-color);
+  display: flex;
+  align-items: center;
+  padding: 6rem;
+  z-index: 3;
+}
+
+/* Efecto diagonal con pseudo-elemento */
+.banner-left::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: -12vw;
+  width: 18vw;
+  height: 100%;
+  background: inherit;
+  transform: skewX(-12deg);
+  z-index: 2;
+  pointer-events: none;
+}
+
+.banner-left .content {
+  max-width: 520px;
+  z-index: 3;
+  position: relative;
+}
+.banner-left h4 {
+  font-weight: 700;
+  margin-bottom: 0.6rem;
+}
+.banner-left h1 {
+  font-size: 3.5rem;
+  margin: 0 0 1rem 0;
+  font-weight: 800;
+  line-height: 1.05;
+}
+.banner-left p {
+  line-height: 1.6;
+  margin-bottom: 2rem;
+  color: rgba(255, 255, 255, 0.95);
+}
+
+/* --- Lado derecho --- */
+.banner-right {
+  flex: 1;
+  position: relative;
+  background: url("https://images.unsplash.com/photo-1517248135467-4c7edcad34c4")
+    center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+
+/* Overlay oscuro */
+.banner-right .overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(10, 10, 10, 0.45);
+  z-index: 1;
+}
+
+/* --- Botón de play --- */
+.play-btn {
+  position: relative;
+  z-index: 3;
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  border: 4px solid white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 34px;
+  cursor: pointer;
+  transition: 0.3s ease;
+  margin-left: 80px;
+}
+.play-btn:hover {
+  transform: scale(1.08);
+  background: var(--white);
+  color: var(--main-color);
+}
+
+/* Centrar visualmente el triángulo */
+.play-btn i {
+  margin-left: 4px;
+}
+
+/* Tablets (entre 768px y 1024px) */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .banner {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background-color: var(--main-color);
+  }
+
+  .banner-left {
+    background-color: var(--main-color);
+    padding: 2rem;
+  }
+  .play-btn {
+    position: relative;
+    z-index: 3;
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    border: 4px solid white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 34px;
+    cursor: pointer;
+    transition: 0.3s ease;
+    margin-right: 20px;
+  }
+}
+/* Responsive Movil */
+@media (max-width: 767px) {
+  .banner {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background-color: var(--main-color);
+  }
+  .banner-left {
+    background-color: var(--main-color);
+    padding: 2rem;
+    text-align: start;
+  }
+  .banner-left h1 {
+    text-align: start;
+  }
+  .banner-right {
+    min-height: 50vh;
+  }
+}

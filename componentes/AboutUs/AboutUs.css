@@ -1,0 +1,71 @@
+h2 {
+  text-transform: uppercase;
+  color: var(--main-color);
+  font-size: 3rem;
+}
+.about-us {
+  width: 100%;
+  height: auto;
+}
+
+.text-us {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 60px 50px;
+}
+.text-us .btn {
+  width: 30%;
+}
+.us {
+  width: 100%;
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.image-us {
+  flex: 1;
+  aspect-ratio: 4 / 3;
+  background-image: url("https://images.unsplash.com/photo-1683702831004-97203ddc564e?...");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 1rem;
+}
+
+/* Tablets (entre 768px y 1024px) */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .us {
+    min-height: auto;
+    display: flex;
+    gap: 0px;
+  }
+
+  .text-us {
+    padding: 20px;
+  }
+}
+/* Responsive Movil */
+@media (max-width: 767px) {
+  .us {
+    min-height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+  .text-us {
+    width: 90%;
+    padding: 0;
+  }
+
+  .image-us {
+    width: 90%;
+    height: 60%;
+    margin-bottom: 60px;
+  }
+}

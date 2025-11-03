@@ -1,0 +1,64 @@
+/*https://demo.templatemonster.com/demo/189177.html?_gl=1*1j2nytf*_ga*OTAwNDUxNjUxLjE3NTExNzU0MzM.*_ga_FTPYEGT5LY*czE3NjEwNTQ4NTIkbzE4JGcxJHQxNzYxMDU0OTEyJGo2MCRsMCRoMA..*/
+
+@import url("https://fonts.googleapis.com/css2?family=Racing+Sans+One&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+h1,
+h2,
+h3,
+h4,
+li {
+  font-family: "Racing Sans One", sans-serif;
+  letter-spacing: 3px;
+}
+
+p,
+input,
+textarea {
+  font-family: "Poppins", sans-serif;
+}
+body {
+  font-family: "Poppins", sans-serif;
+  background: #111;
+  color: var(--white);
+}
+:root {
+  --main-color: orange;
+  --white: white;
+}
+
+ul > li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.btn {
+  width: 150px;
+  height: 45px;
+  border: 2px solid var(--white);
+  background: transparent;
+  color: var(--white);
+
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: "Poppins", sans-serif;
+}
+.btn:hover {
+  background: var(--white);
+  color: var(--main-color);
+  font-weight: 700;
+}

@@ -1,0 +1,120 @@
+/* Header */
+header {
+  background-color: var(--main-color);
+}
+
+/* Nav principal */
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 5px 20px;
+}
+
+nav > img {
+  width: 65px;
+}
+
+/* Menú de navegación */
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+nav ul li a {
+  position: relative;
+  text-decoration: none;
+  color: black;
+  padding: 5px 0;
+  display: inline-block;
+  text-transform: uppercase;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: var(--white);
+}
+
+/* Línea animada al hover */
+nav ul li a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  width: 100%;
+  background-color: var(--white);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
+nav ul li a:hover::after {
+  transform: scaleX(1);
+}
+
+/* Botón hamburguesa */
+.hamburger {
+  display: none; /* oculto en pantallas grandes */
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.hamburger span {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background-color: black;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+/* Animación a X */
+.hamburger.open span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.open span:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* Responsive Movil */
+@media (max-width: 768px) {
+  nav {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    gap: 40px;
+  }
+  nav ul {
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background-color: white;
+    flex-direction: column;
+    width: 200px;
+    padding: 10px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+    display: none;
+  }
+
+  nav ul.active {
+    transform: translateX(0);
+    display: flex;
+  }
+
+  .hamburger {
+    display: flex; /* visible en móviles */
+  }
+  nav ul li:hover {
+    color: var(--white);
+  }
+}

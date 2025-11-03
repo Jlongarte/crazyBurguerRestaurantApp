@@ -1,0 +1,99 @@
+.team {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 4rem;
+  gap: 3rem;
+}
+
+.members {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+/* Imagen base */
+.member {
+  position: relative;
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.member:hover {
+  transform: scale(1.05);
+}
+
+/* Overlay */
+.overlay {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.member:hover .overlay {
+  opacity: 1;
+}
+
+/* Texto */
+.overlay h3 {
+  margin: 0.5rem 0 0;
+  font-size: 1.2rem;
+}
+
+.overlay p {
+  margin: 0;
+  font-size: 1rem;
+  opacity: 0.8;
+}
+
+/* Redes sociales */
+.socials {
+  display: flex;
+  gap: 1rem;
+  margin-top: 0.8rem;
+}
+
+.socials a {
+  color: white;
+  font-size: 1.2rem;
+  transition: color 0.3s ease;
+}
+
+.socials a:hover {
+  color: #f0c040; /* dorado, puedes cambiarlo */
+}
+
+/* Ejemplo de imágenes */
+.member-one {
+  background-image: url("https://images.unsplash.com/photo-1566554273541-37a9ca77b91f?ixlib=rb-4.1.0&auto=format&fit=crop&w=500&q=60");
+}
+
+.member-two {
+  background-image: url("https://images.unsplash.com/photo-1722587592115-cfedd6b84b56?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTE1fHxjb2NpbmVyb3xlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&q=60&w=500");
+}
+
+.member-three {
+  background-image: url("https://images.unsplash.com/photo-1731576089270-9e806089a40f?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NjR8fGNvY2luZXJhfGVufDB8fDB8fHww&auto=format&fit=crop&q=60&w=500");
+}
+
+.member-four {
+  background-image: url("https://images.unsplash.com/photo-1665596666171-2378d6e973b9?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8ODR8fGNvY2luZXJhfGVufDB8fDB8fHww&auto=format&fit=crop&q=60&w=500");
+}

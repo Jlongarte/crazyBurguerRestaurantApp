@@ -1,0 +1,161 @@
+.menu {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding: 4rem 2rem 2rem 2rem;
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+}
+
+/* Card con efecto flip */
+.card {
+  width: 320px;
+  height: 420px;
+  perspective: 1000px;
+}
+
+.card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+  border-radius: 20px;
+}
+
+.card:hover .card-inner {
+  transform: rotateY(180deg);
+}
+
+/* Front y back del flip */
+.card-front,
+.card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  backface-visibility: hidden;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--white);
+  color: black;
+
+  /* Borde difuminado */
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.3);
+}
+
+.card-front img {
+  width: 100%;
+  height: 50%;
+  max-height: 250px;
+  object-fit: cover;
+}
+
+.card-front .card-container {
+  padding: 10px;
+  width: 100%;
+  height: 50%;
+  text-align: center;
+}
+.card-front .card-container {
+  padding: 10px;
+  width: 100%;
+  height: 50%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-front h3 {
+  display: inline-block;
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+.card-front h4 {
+  display: inline-block;
+  margin-left: 10px;
+  color: var(--main-color);
+  font-weight: bold;
+}
+
+.card-back {
+  transform: rotateY(180deg);
+  padding: 20px;
+  text-align: center;
+}
+
+.card-back h4 {
+  margin-bottom: 10px;
+  color: var(--main-color);
+}
+
+.card-back p {
+  font-size: 0.9rem;
+  word-wrap: break-word;
+}
+
+.small {
+  display: block;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  white-space: normal;
+  text-align: center;
+  max-width: 100%;
+}
+.categories {
+  display: flex;
+  flex-direction: row;
+  gap: 7px;
+}
+/* Botones de categoría */
+.active {
+  background-color: var(--main-color);
+  color: white;
+}
+
+/* Tablets (entre 768px y 1024px) */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .menu h2 {
+    font-size: 2rem;
+  }
+
+  .categories {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 80%;
+    margin: auto;
+    gap: 10px;
+  }
+}
+/* Responsive Movil */
+@media (max-width: 767px) {
+  .menu h2 {
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  .categories {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 80%;
+    margin: auto;
+    gap: 10px;
+  }
+}
