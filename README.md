@@ -21,3 +21,6 @@ El proyecto está enfocado en la manipulación del **DOM** y en la organización
 - **CSS3** — estilos y diseño visual.
 - **JavaScript (ES6+)** — lógica e interacción.
 - **Vite** — servidor de desarrollo rápido y empaquetador.
+
+## 👋 Proyecto desplegado aquí
+https://projectcrazyburguer.netlify.app/
